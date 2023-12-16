@@ -17,19 +17,35 @@ nav {
   background-color: #2d7cc5;
 }
 
-section{
-    grid-area: section;
-    background-color: aqua;
+section {
+  grid-area: section;
+  background-color: aqua;
 }
 
-footer{
-    grid-area: footer;
-    background-color: rebeccapurple;
+footer {
+  grid-area: footer;
+  background-color: rebeccapurple;
+  display: flex;
+  color: aliceblue;
+  align-items: center;
+  justify-content: center;
+}
+
+footer > i {
+    padding: 5px;
+}
+footer > p {
+    padding: 5px;
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 768px) {  }
-
-
-/* X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  }
+@media (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-rows: 50px calc(100vh - 138px) 80px;
+    grid-template-areas:
+      "nav section section"
+      "nav section section"
+      "nav footer footer";
+  }
+}
