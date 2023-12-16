@@ -3,6 +3,33 @@
   padding: 0;
   box-sizing: border-box;
 }
- body{
-    background-color: aquamarine;
- }
+body {
+  display: grid;
+  grid-template-rows: 68px calc(100vh - 148px) 80px;
+  grid-template-areas:
+    "nav"
+    "section"
+    "footer";
+}
+
+nav {
+  grid-area: nav;
+  background-color: #2d7cc5;
+}
+
+section{
+    grid-area: section;
+    background-color: aqua;
+}
+
+footer{
+    grid-area: footer;
+    background-color: rebeccapurple;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 768px) {  }
+
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }
